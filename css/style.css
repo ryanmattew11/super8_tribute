@@ -1,0 +1,118 @@
+:root {
+  --primary: #222;
+  --bg: #333;
+  --text: #F0F0F0;
+  --rev-text: #F0F0F0;
+  --dk-bg: #222;
+  --accent: #F0BD84;
+  --fill-one: #ECD2D2;
+  --fill-two: #4D6774;
+  --fill-three: #F6733D;
+  --fill-four: #F0BD84;
+}
+body {
+  font-family: 'work sans', 'sans-serif';
+  color: var(--text);
+  background-color:  var(--bg);
+  font-size: 16px;
+  /*-- uncomment for overflow fix
+  overflow-x: hidden; --*/
+}
+h1 {
+  font-size: 2em;
+  font-family: 'Palm Canyon Drive', 'Brush Script MT', 'sans-serif';
+}
+h2 {
+  font-size: 1.8em;
+  font-family: 'work sans', 'sans-serif';
+}
+p {
+  font-family: 'work sans', 'sans-serif';
+  font-size: 1em;
+  margin-bottom: .67em;
+}
+p:first-child {
+  font-size: 1.3em;
+}
+nav, footer {
+  background-color: var(--primary);
+}
+footer {
+  text-align: center;
+  padding: 1em 0 .3em 0;
+  color: var(--rev-text);
+}
+/*-- Main Menu Styles--*/
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+nav a {
+  padding: 1em;
+}
+nav a:link, nav a:visited {
+  color: var(--rev-text);
+  text-decoration: none;
+}
+nav a:hover, nav a:active  {
+  color: #F0F0F0;
+  text-decoration: underline;
+}
+nav a.active {
+  color: var(--rev-text);
+}
+/*-- Hero Unit Styles--*/
+main {
+  padding: 2em;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1em;
+  justify-items: center;
+  align-items: center;
+  grid-template-areas:
+            "head head head";
+}
+@media screen and (max-width: 767px) {
+  main { grid-template-columns: 1fr;
+         grid-template-areas:
+            "head";
+  }
+  .wall {display: none;}
+  .splash {display: none;}
+  header {grid-template-columns: 1fr;}
+  .hero-title h1, .hero-title h2 {text-align: center;}
+}
+header {
+  grid-area: head;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 1em;
+  justify-items: center;
+  align-items: center;
+  padding: 2em;
+  background-color: var(--accent);
+}
+.hero-title {
+  color: var(--rev-text);
+}
+.larger {
+  font-family: 'Palm Canyon Drive', 'Brush Script MT';
+  font-size: 5.5em;
+  font-weight: 300;
+}
+section {
+}
+
+.grid-container {
+
+}
+.grid-item {
+
+}
+#first {grid-area: one;}
+#second {grid-area: two;}
+#third {grid-area: three;}
+#fourth {grid-area: four;}
+#fifth {grid-area: five;}
+.wall {grid-area: img;}
