@@ -21,6 +21,7 @@ body {
 h1 {
   font-size: 2em;
   font-family: 'Palm Canyon Drive', 'Brush Script MT', 'sans-serif';
+  text-align:center;
 }
 h2 {
   font-size: 1.8em;
@@ -66,40 +67,35 @@ nav a.active {
 main {
   padding: 2em;
 }
-@media screen and (max-width: 767px) {
-  main { grid-template-columns: 1fr;
-         grid-template-areas:
-            "head";
 header {
-  grid-area: head;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-gap: 1em;
-  justify-items: center;
-  align-items: center;
   padding: 2em;
   background-color: var(--accent);
 }
 .hero-title {
   color: var(--rev-text);
+  text-align: center;
 }
 .larger {
   font-family: 'Palm Canyon Drive', 'Brush Script MT';
   font-size: 5.5em;
   font-weight: 300;
+  text-align: center;
 }
-section {
+h2 {
+  text-align: center;
 }
-
+hr {
+  margin: 2em 0;
+}
 .grid-container {
-
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: space-between;
 }
 .grid-item {
-
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
-#first {grid-area: one;}
-#second {grid-area: two;}
-#third {grid-area: three;}
-#fourth {grid-area: four;}
-#fifth {grid-area: five;}
-.wall {grid-area: img;}
