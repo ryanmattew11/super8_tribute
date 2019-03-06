@@ -65,24 +65,11 @@ nav a.active {
 /*-- Hero Unit Styles--*/
 main {
   padding: 2em;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 1em;
-  justify-items: center;
-  align-items: center;
-  grid-template-areas:
-            "head head head";
 }
 @media screen and (max-width: 767px) {
   main { grid-template-columns: 1fr;
          grid-template-areas:
             "head";
-  }
-  .wall {display: none;}
-  .splash {display: none;}
-  header {grid-template-columns: 1fr;}
-  .hero-title h1, .hero-title h2 {text-align: center;}
-}
 header {
   grid-area: head;
   display: grid;
